@@ -7,6 +7,18 @@ g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
 
+g.coq_settings = {
+	auto_start = true,
+  completion = {
+    always = false,
+  },
+  display = {
+    statusline = {
+      helo = false,
+    }
+  },
+}
+
 opt.autowrite = true
 -- opt.clipboard = "unnamedplus"
 opt.confirm = true
@@ -41,3 +53,11 @@ opt.updatetime = 200
 opt.undofile = true
 opt.formatoptions:append("jcroqlnt")
 opt.sessionoptions:append({ "unix", "slash" })
+
+vim.diagnostic.config({
+	virtual_text = true,
+	signs = true,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
+})
