@@ -1,1 +1,5 @@
+require("configs.options")
+require("configs.mappings")
+require("configs.lsp")
 require("treesitter")
+require("plugins.init")
