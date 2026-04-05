@@ -2,6 +2,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 	{ src = "https://github.com/akinsho/bufferline.nvim" },
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
+	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 
 nt = require("nvim-tree.api")
@@ -103,3 +104,5 @@ require("bufferline").setup({
 		},
 	},
 })
+
+require("lualine").setup()

@@ -9,14 +9,14 @@ g.loaded_ruby_provider = 0
 
 g.coq_settings = {
 	auto_start = true,
-  completion = {
-    always = false,
-  },
-  display = {
-    statusline = {
-      helo = false,
-    }
-  },
+	completion = {
+		always = false,
+	},
+	display = {
+		statusline = {
+			helo = false,
+		},
+	},
 }
 
 opt.autowrite = true

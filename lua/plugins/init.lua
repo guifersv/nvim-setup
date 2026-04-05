@@ -11,13 +11,11 @@ vim.pack.add({
 
 vim.cmd.colorscheme("oasis-twilight")
 
-require("plugins.git")
-require("plugins.editor")
-
 coq = require("coq")
 
 conform = require("conform")
 conform.formatters_by_ft.lua = { "stylua" }
+conform.formatters_by_ft.markdown = { "prettier" }
 
 wk = require("which-key")
 wk.add({
@@ -25,5 +23,17 @@ wk.add({
 	{ "<leader>l", group = "Code", mode = "n" },
 	{ "<leader>g", group = "Git", mode = "n" },
 	{ "<leader>b", group = "Buffer", mode = "n" },
+	{ "<leader>f", group = "Telescope", mode = "n" },
 	-- { "<leader>z", group = "Zig", mode = "n" },
 })
+
+builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+
+require("plugins.git")
+require("plugins.editor")
+require("plugins.utils")
+require("plugins.motion")
