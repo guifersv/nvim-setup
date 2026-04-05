@@ -24,6 +24,7 @@ wk.add({
 	{ "<leader>g", group = "Git", mode = "n" },
 	{ "<leader>b", group = "Buffer", mode = "n" },
 	{ "<leader>f", group = "Telescope", mode = "n" },
+	{ "<leader>r", group = "Rust", mode = "n" },
 	-- { "<leader>z", group = "Zig", mode = "n" },
 })
 
@@ -37,3 +38,4 @@ require("plugins.git")
 require("plugins.editor")
 require("plugins.utils")
 require("plugins.motion")
+require("plugins.rust")
