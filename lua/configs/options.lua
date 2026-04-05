@@ -54,6 +54,9 @@ opt.undofile = true
 opt.formatoptions:append("jcroqlnt")
 opt.sessionoptions:append({ "unix", "slash" })
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.diagnostic.config({
 	virtual_text = true,
 	signs = true,

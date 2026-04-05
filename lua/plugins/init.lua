@@ -9,7 +9,10 @@ vim.pack.add({
 	{ src = "https://github.com/uhs-robert/oasis.nvim" },
 })
 
+vim.cmd.colorscheme("oasis-twilight")
+
 require("plugins.git")
+require("plugins.editor")
 
 coq = require("coq")
 
@@ -21,17 +24,6 @@ wk.add({
 	{ "<leader><tab>", group = "Tab", mode = "n" },
 	{ "<leader>l", group = "Code", mode = "n" },
 	{ "<leader>g", group = "Git", mode = "n" },
-	-- { "<leader>c", group = "Trouble", mode = "n" },
-	-- { "<leader>b", group = "Buffer", mode = "n" },
+	{ "<leader>b", group = "Buffer", mode = "n" },
 	-- { "<leader>z", group = "Zig", mode = "n" },
 })
-
-gs = require("gitsigns")
-vim.keymap.set("n", "<leader>gd", gs.diffthis, { desc = "Git diff" })
-
-vim.keymap.set("n", "<leader>gG", require("neogit").open, { desc = "Neogit UI" })
-vim.keymap.set("n", "<leader>gg", function()
-	require("neogit").open({ kind = "split" })
-end, { desc = "Neogit floating UI" })
-
-vim.cmd.colorscheme("oasis-twilight")
