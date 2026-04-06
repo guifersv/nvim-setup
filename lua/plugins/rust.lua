@@ -3,6 +3,8 @@ vim.pack.add({
 	{ src = "https://github.com/mrcjkb/rustaceanvim", version = vim.version.range("^9") },
 })
 
+-- https://neovim.io/doc/user/ft_rust/#ft_rust.txt
+
 vim.api.nvim_create_autocmd("BufRead", {
 	pattern = "Cargo.toml",
 	callback = function()

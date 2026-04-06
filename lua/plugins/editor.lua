@@ -3,6 +3,7 @@ vim.pack.add({
 	{ src = "https://github.com/akinsho/bufferline.nvim" },
 	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
+	{ src = "https://github.com/stevearc/overseer.nvim" },
 })
 
 nt = require("nvim-tree.api")
@@ -106,3 +107,7 @@ require("bufferline").setup({
 })
 
 require("lualine").setup()
+
+overseer = require("overseer")
+vim.keymap.set("n", "<leader>oo", overseer.toggle, { desc = "Overseer: toggle" })
+vim.keymap.set("n", "<leader>or", overseer.run_task, { desc = "Overseer: run task" })
