@@ -6,6 +6,8 @@ g.loaded_node_provider = 0
 g.loaded_python3_provider = 0
 g.loaded_perl_provider = 0
 g.loaded_ruby_provider = 0
+g.loaded_netrw = 1
+g.loaded_netrwPlugin = 1
 
 g.coq_settings = {
 	auto_start = true,
@@ -19,6 +21,10 @@ g.coq_settings = {
 	},
 }
 
+opt.wrap = true
+opt.linebreak = true
+opt.textwidth = 80
+opt.breakindent = true
 opt.autowrite = true
 -- opt.clipboard = "unnamedplus"
 opt.confirm = true
@@ -29,7 +35,6 @@ opt.smartcase = true
 opt.number = true
 opt.relativenumber = true
 opt.signcolumn = "yes"
-opt.wrap = false
 opt.scrolloff = 4
 opt.sidescrolloff = 8
 opt.splitbelow = true
@@ -42,6 +47,8 @@ opt.shiftround = true
 opt.completeopt = "menu,menuone,noselect"
 opt.incsearch = true
 opt.hlsearch = true
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 opt.foldlevel = 99
 opt.foldenable = true
 opt.laststatus = 3
@@ -53,9 +60,6 @@ opt.updatetime = 200
 opt.undofile = true
 opt.formatoptions:append("jcroqlnt")
 opt.sessionoptions:append({ "unix", "slash" })
-
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 
 vim.diagnostic.config({
 	virtual_text = true,

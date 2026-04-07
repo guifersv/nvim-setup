@@ -7,3 +7,4 @@ vim.pack.add({
 
 require("render-markdown").setup()
 require("todo-comments").setup()
+require("nvim-surround").setup()

@@ -26,6 +26,7 @@ set("n", "<leader>?", function()
 	require("which-key").show({ global = false })
 end, { desc = "Buffer Local Keymaps (which-key)" })
 -- set("n", "<leader>gg", "<cmd>Neogit<cr>", { desc = "Show Neogit UI" })
+vim.keymap.set('n', '<leader>x', ':bd<CR>', { noremap = true, silent = true })
 
 set("n", "<leader>lh", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
