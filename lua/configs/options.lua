@@ -9,18 +9,6 @@ g.loaded_ruby_provider = 0
 g.loaded_netrw = 1
 g.loaded_netrwPlugin = 1
 
-g.coq_settings = {
-	auto_start = true,
-	completion = {
-		always = false,
-	},
-	display = {
-		statusline = {
-			helo = false,
-		},
-	},
-}
-
 opt.wrap = true
 opt.linebreak = true
 opt.textwidth = 80
