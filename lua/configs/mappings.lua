@@ -46,3 +46,6 @@ set(
 	"ovar arena = std.heap.ArenaAllocator.init(std.testing.allocator);<CR>defer arena.deinit();<CR>const allocator = arena.allocator();<ESC>",
 	{ desc = "Zig: ArenaAllocator" }
 )
+
+vim.keymap.set("n", "<S-l>", vim.cmd.bnext, { silent = true })
+vim.keymap.set("n", "<S-h>", vim.cmd.bprevious, { silent = true })

@@ -106,6 +106,16 @@ require("bufferline").setup({
 	},
 })
 
+vim.keymap.set("n", "<leader>bp", function()
+	require("bufferline").toogle_pin()
+end, { desc = "Bufferline: toggle Pin" })
+vim.keymap.set("n", "<leader>br", function()
+	require("bufferline").close_in_direction("right")
+end, { desc = "Bufferline: delete buffers to the right" })
+vim.keymap.set("n", "<leader>bl", function()
+	require("bufferline").close_in_direction("left")
+end, { desc = "Bufferline: delete buffers to the left" })
+
 require("lualine").setup()
 
 overseer = require("overseer")

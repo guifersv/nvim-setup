@@ -22,6 +22,7 @@ wk.add({
 	{ "<leader>f", group = "Telescope", mode = "n" },
 	{ "<leader>r", group = "Rust", mode = "n" },
 	{ "<leader>z", group = "Zig", mode = "n" },
+	{ "<leader>b", group = "Buffers", mode = "n" },
 })
 
 builtin = require("telescope.builtin")
