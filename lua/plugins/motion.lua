@@ -1,6 +1,6 @@
 vim.pack.add({
-	{ src = "https://codeberg.org/andyg/leap.nvim" },
-	{ src = "https://github.com/chrisgrieser/nvim-spider" },
+	"https://codeberg.org/andyg/leap.nvim",
+	"https://github.com/chrisgrieser/nvim-spider",
 })
 
 spider = require("spider")

@@ -25,9 +25,8 @@ set("n", "<leader><tab>h", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
 set("n", "<leader>?", function()
 	require("which-key").show({ global = false })
 end, { desc = "Buffer Local Keymaps (which-key)" })
--- set("n", "<leader>gg", "<cmd>Neogit<cr>", { desc = "Show Neogit UI" })
-vim.keymap.set("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true, desc = "Close buffer" })
-vim.keymap.set("i", "<C-space>", vim.lsp.completion.get)
+set("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true, desc = "Close buffer" })
+set("i", "<C-space>", vim.lsp.completion.get)
 
 set("n", "<leader>lh", function()
 	vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
@@ -47,5 +46,5 @@ set(
 	{ desc = "Zig: ArenaAllocator" }
 )
 
-vim.keymap.set("n", "<S-l>", vim.cmd.bnext, { silent = true })
-vim.keymap.set("n", "<S-h>", vim.cmd.bprevious, { silent = true })
+set("n", "<S-l>", vim.cmd.bnext, { silent = true })
+set("n", "<S-h>", vim.cmd.bprevious, { silent = true })

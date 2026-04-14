@@ -1,9 +1,9 @@
 vim.pack.add({
-	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
-	{ src = "https://github.com/akinsho/bufferline.nvim" },
-	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
-	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
-	{ src = "https://github.com/stevearc/overseer.nvim" },
+	"https://github.com/nvim-tree/nvim-web-devicons",
+	"https://github.com/akinsho/bufferline.nvim",
+	"https://github.com/nvim-tree/nvim-tree.lua",
+	"https://github.com/nvim-lualine/lualine.nvim",
+	"https://github.com/stevearc/overseer.nvim",
 })
 
 nt = require("nvim-tree.api")
