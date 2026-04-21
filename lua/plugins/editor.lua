@@ -3,7 +3,6 @@ vim.pack.add({
 	"https://github.com/akinsho/bufferline.nvim",
 	"https://github.com/nvim-tree/nvim-tree.lua",
 	"https://github.com/nvim-lualine/lualine.nvim",
-	"https://github.com/stevearc/overseer.nvim",
 })
 
 nt = require("nvim-tree.api")
@@ -107,7 +106,7 @@ require("bufferline").setup({
 })
 
 vim.keymap.set("n", "<leader>bp", function()
-	require("bufferline").toogle_pin()
+	require("bufferline").toggle_pin()
 end, { desc = "Bufferline: toggle Pin" })
 vim.keymap.set("n", "<leader>br", function()
 	require("bufferline").close_in_direction("right")
@@ -115,9 +114,14 @@ end, { desc = "Bufferline: delete buffers to the right" })
 vim.keymap.set("n", "<leader>bl", function()
 	require("bufferline").close_in_direction("left")
 end, { desc = "Bufferline: delete buffers to the left" })
+vim.keymap.set("n", "<leader>bo", function()
+	require("bufferline").close_others()
+end, { desc = "Bufferline: close other buffers" })
+vim.keymap.set("n", "<leader>bb", function()
+	require("bufferline").pick_buffer()
+end, { desc = "Bufferline: pick buffer" })
+vim.keymap.set("n", "<leader>bc", function()
+	require("bufferline").close_with_pick()
+end, { desc = "Bufferline: close buffer with pick" })
 
 require("lualine").setup()
-
-overseer = require("overseer")
-vim.keymap.set("n", "<leader>oo", overseer.toggle, { desc = "Overseer: toggle" })
-vim.keymap.set("n", "<leader>or", overseer.run_task, { desc = "Overseer: run task" })
