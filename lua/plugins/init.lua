@@ -11,6 +11,7 @@ vim.cmd.colorscheme("oasis-twilight")
 
 conform = require("conform")
 conform.formatters_by_ft.lua = { "stylua" }
+conform.formatters_by_ft.go = { "gofumpt" }
 conform.formatters_by_ft.markdown = { "prettier" }
 
 wk = require("which-key")

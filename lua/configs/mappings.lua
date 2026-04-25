@@ -38,13 +38,5 @@ set("n", "<leader>lf", function()
 	require("conform").format({ async = true, lsp_format = "fallback" })
 end, { desc = "Format buffer" })
 
-set("n", "<leader>zv", "ovar f: usize = 0;<CR>_ = &f;<ESC>", { desc = "Zig: runtime var" })
-set(
-	"n",
-	"<leader>za",
-	"ovar arena = std.heap.ArenaAllocator.init(std.testing.allocator);<CR>defer arena.deinit();<CR>const allocator = arena.allocator();<ESC>",
-	{ desc = "Zig: ArenaAllocator" }
-)
-
 set("n", "<S-l>", vim.cmd.bnext, { silent = true })
 set("n", "<S-h>", vim.cmd.bprevious, { silent = true })

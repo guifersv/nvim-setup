@@ -5,6 +5,5 @@ vim.pack.add({
 	"https://github.com/tpope/vim-repeat",
 })
 
-require("render-markdown").setup()
 require("todo-comments").setup()
 require("nvim-surround").setup()
