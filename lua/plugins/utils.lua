@@ -1,9 +1,47 @@
-vim.pack.add({
-	"https://github.com/kylechui/nvim-surround",
-	"https://github.com/MeanderingProgrammer/render-markdown.nvim",
-	"https://github.com/folke/todo-comments.nvim",
-	"https://github.com/tpope/vim-repeat",
-})
-
-require("todo-comments").setup()
-require("nvim-surround").setup()
+return {
+	{
+		"neovim/nvim-lspconfig",
+	},
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		opts = {},
+	},
+	{
+		"folke/todo-comments.nvim",
+		opts = {},
+	},
+	{
+		"NeogitOrg/neogit",
+		lazy = true,
+		dependencies = {
+			"sindrets/diffview.nvim",
+		},
+		cmd = "Neogit",
+		keys = {
+			{ "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" },
+		},
+	},
+	{
+		"stevearc/conform.nvim",
+		event = { "BufWritePre" },
+		cmd = { "ConformInfo" },
+		keys = {
+			{
+				"<leader>lf",
+				function()
+					require("conform").format({ async = true })
+				end,
+				mode = "",
+				desc = "Format buffer",
+			},
+		},
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+			},
+			default_format_opts = {
+				lsp_format = "fallback",
+			},
+		},
+	},
+}
