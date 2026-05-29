@@ -1,3 +1,8 @@
 require("helpers/globals")
 
-lsp.enable("jdtls")
+lsp.config("gopls", {
+	gofumpt = true,
+})
+
+vim.lsp.enable("zls")
+vim.lsp.enable("gopls")
