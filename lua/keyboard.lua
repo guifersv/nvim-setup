@@ -4,9 +4,7 @@ wk.add({
 	{ "<leader>g", group = "Git", mode = "n" },
 	{ "<leader>f", group = "Pick", mode = "n" },
 	{ "<leader>d", group = "Debug", mode = "n" },
-	-- { "<leader>z", group = "Zig", mode = "n" },
 	-- { "<leader>b", group = "Buffers", mode = "n" },
-	-- { "<leader>d", group = "Debugger", mode = "n" },
 })
 
 local map = require("helpers.keys").map
